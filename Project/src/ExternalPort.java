@@ -51,4 +51,12 @@ public class ExternalPort
   {
     return number;
   }
+
+  public boolean equals(Object obj)
+  {
+    if(!(obj instanceof ExternalPort))
+      return false;
+    ExternalPort other=(ExternalPort)obj;
+    return type.equals(other.type) && number==other.number;
+  }
 }

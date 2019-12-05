@@ -116,4 +116,12 @@ public class Classroom
   {
     return externalPorts;
   }
+
+  public boolean equals(Object obj)
+  {
+    if(!(obj instanceof Classroom))
+      return false;
+    Classroom other=(Classroom)obj;
+    return number.equals(other.number) && projector==other.projector && getNumberOfSeats()==other.getNumberOfSeats() && numberOfSockets==other.numberOfSockets && externalPorts.equals(other.externalPorts);
+  }
 }

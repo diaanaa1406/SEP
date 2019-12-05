@@ -54,4 +54,12 @@ public class Clock
   {
     return minute;
   }
+
+  public boolean equals(Object obj)
+  {
+    if(!(obj instanceof Clock))
+      return false;
+    Clock other=(Clock)obj;
+    return hour==other.hour && minute==other.minute;
+  }
 }
